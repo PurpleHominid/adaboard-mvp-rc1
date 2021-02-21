@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Basic Setup</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Ada Message Board API">
+	
+		<link href="./styles/bootstrap.min.css" rel="stylesheet">
+		<link href="./styles/default.css" rel="stylesheet">
+		<link rel="icon" href="./images/favicon.png">
+
+	</head>
+
+	<body>
+
+		<!-- define the page header -->
+		<header>
+			<!-- define header object -->
+			<div class="collapse bg-dark" id="navbarHeader">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-8 col-md-7 py-4">
+							<h4 class="text-white">About</h4>
+							<p class="text-muted">Welcome to Ada’s MVP Message board (Database Assignment 1 of 2), this is the initial attempt at designing and implementing a basic service to support online discussions between users with similar interests and topics; conversations are packaged and sent via a locally running API before being processed and centrally stored for later retrieval or modification and review.  Part of your job will be to help implement a number of basic services; see your backlog for more information.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- define header navigation bar -->
+			<div class="navbar navbar-dark bg-dark shadow-sm fixed-top">
+				<div class="container">
+					<a href="#" class="navbar-brand d-flex align-items-center">
+						<img src="./images/ada-logo.png" alt="ada logo" width="24" height="24">
+						<strong style="padding-left: 8px;">Ada Board (MVP)</strong>
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- define the page's main area: start -->
+		<main>
+
+			<!-- define page's hero object -->
+			<section class="py-1 text-center container" style="position: relative; top: 20px;">
+				<div class="row py-lg-5">
+					<div class="col-lg-6 col-md-8 mx-auto">
+						<h1 class="fw-light">
+							<img src="./images/ada-logo.png" alt="ada logo" width="32" height="32" style="margin: 0px 0px 7px 0px;">
+							Ada Board (MVP)
+						</h1>
+						<p class="lead text-muted">
+							Complete the specified backlog consisting of a series of database related tasks associated with the creation of the in-house messaging service ‘AdaBoard’ MVP.
+						</p>
+						<p>
+							<!-- hero button 1 -->
+							<a id="buildschema" class="btn btn-primary my-2">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hdd-fill" viewBox="0 0 16 16">
+									<path d="M0 10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-1zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2 0a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM.91 7.204A2.993 2.993 0 0 1 2 7h12c.384 0 .752.072 1.09.204l-1.867-3.422A1.5 1.5 0 0 0 11.906 3H4.094a1.5 1.5 0 0 0-1.317.782L.91 7.204z"/>
+								</svg>
+								&nbsp;Build Schema
+							</a>
+
+							<!-- hero button 2 -->
+							<a id="dropschema" class="btn btn-secondary my-2">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+									<path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+									<path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+								</svg>
+								&nbsp;Drop Schema
+							</a>
+
+							<!-- hero button 3 -->
+							<span style="margin-left: 30px;">
+								<a id="sqlfiddle" class="btn btn-warning my-2">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+										<path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+										<path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+									</svg>
+									&nbsp;SQL Fiddle
+								</a>
+							</span>
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<div class="album py-5 bg-light">
+				<div class="container">
+
+					<!-- define page row: start -->
+					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+
+<!-- ............................................................... -->
+						<!-- define card 1 api service 1: start -->
+						<form class="col" id="form_12">
+							<div class="card shadow-sm">
+								<div class="ui-container">
+									<div class="ui-centre">Add User (API POST)</div>
+								</div>
+								<div class="card-body">
+									<p class="card-text">
+										Add an AdaBoard user; userid must be a unique number (e.g., 10010), friendly names can be their full (or nick) name, email addresses must be unique, administrators should be identified as: 1, standard users: 0.
+									</p>									
+
+									<!-- define api input 1: start -->
+									<div class="input-group input-group-sm mb-3">
+										<span class="input-group-text">Userid</span>
+										<input name="userid" type="text" placeholder="e.g., unique id" class="form-control">
+									</div>
+
+									<!-- define api input 2: start -->
+									<div class="input-group input-group-sm mb-3">
+										<span class="input-group-text">Friendly name</span>
+										<input name="friendlyname" type="text" placeholder="e.g., full name" class="form-control">
+									</div>
+									
+									<!-- define api input 3: start -->
+									<div class="input-group input-group-sm mb-3">
+										<span class="input-group-text">Email address</span>
+										<input name="emailaddress" type="text" placeholder="e.g., unique email" class="form-control">
+									</div>
+
+									<!-- define api input 4: start -->
+									<div class="input-group input-group-sm mb-3">
+										<span class="input-group-text">Admin</span>
+										<input name="admin" type="text" placeholder="e.g., 1=Admin, 0=User" class="form-control">
+									</div>
+
+									<!-- define api submission -->
+									<div class="mb-3">
+										<div class="d-flex justify-content-between align-items-center">
+											<div class="btn-group">
+												<button type="button" class="btn btn-sm btn-primary" onclick="form12(this);">Submit</button>
+												<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#apimodal">Response</button>
+											</div>
+										</div>
+									</div>
+									<div style="padding-top: 10px;">
+										<small class="text-muted">Backlog &num;12 / 16</small>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- define card 1 api service 1: end -->
+<!-- ............................................................... -->
+
+<!-- ............................................................... -->
+						<!-- define card 2 api service 2: start -->
+						<form class="col" id="form_13">
+							<div class="card shadow-sm">
+								<div class="ui-container">
+									<div class="ui-centre">All Users (API GET)</div>
+								</div>
+								<div class="card-body">
+									<p class="card-text">
+										Returns all AdaBoard users
+									</p>									
+
+									<!-- define api submission -->
+									<div class="mb-3">
+										<div class="d-flex justify-content-between align-items-center">
+											<div class="btn-group">
+												<button type="button" class="btn btn-sm btn-primary" onclick="form13(this);">Submit</button>
+												<button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#apimodal">Response</button>
+											</div>
+										</div>
+									</div>
+									<div style="padding-top: 10px;">
+										<small class="text-muted">Backlog &num;13 / 16</small>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- define card 2 api service 2: end -->
+<!-- ............................................................... -->
+
+
+      				</div>
+					<!-- define page row: end -->
+
+    			</div>
+  			</div>
+
+		</main>
+		<!-- define the page's main area: end -->
+
+
+		<!-- modal dialogue: start -->
+		<div class="modal fade" id="apimodal" tabindex="-1" aria-hidden="true" role="dialog">
+			<div class="modal-dialog modal-dialog-scrollable modal-xl">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="apimodallabel">API Response</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" id="apimodalresponse">
+						...
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- modal dialogue: end -->
+
+
+		<footer class="text-muted py-5">
+			<div class="container">
+				<p class="float-end mb-1">
+					<a href="#">
+						<img src="./images/ada-logo.png" alt="ada logo" width="32" height="32">
+					</a>
+				</p>
+				<p class="mb-1">Ada Board (MVP)&nbsp;<script>document.write(new Date().getFullYear())</script>&nbsp;Launchpad Database Assignment &num;1
+
+			</div>
+		</footer>
+
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/send.js"></script>
+		<script src="./js/apiservice.js"></script>
+
+		<script>
+
+			function form12(object) {
+				//process form12 - add user
+				let elements = document.forms[object.form.id].elements; //create array with all associated form elements
+				let data = apiassembledata(elements); //assemble a javascript object containing all associated form elements
+				apiserviceadduser(data); //execute the appropriate api service 
+			}
+
+
+			function form13(object) {
+				//process form13 - list all users
+				let elements = document.forms[object.form.id].elements; //create array with all associated form elements
+				let data = apiassembledata(elements); //assemble a javascript object containing all associated form elements
+				apiserviceallusers(data); //execute the appropriate api service 
+			}
+
+
+			document.getElementById("buildschema").addEventListener("click", function() {
+				//run this function when we 'hear' the build schema button being clicked 
+				apiservicebuildschema();
+			});
+
+
+			document.getElementById("dropschema").addEventListener("click", function() {				
+				//run this function when we 'hear' the drop schema button being clicked
+				apiservicedropschema();
+			});
+
+
+			document.getElementById("sqlfiddle").addEventListener("click", function() { //listen for a click on the fiddle button
+				//execute this instruction when we 'hear' the sqlfiddle button being clicked
+				window.open("http://sqlfiddle.com/#!5", "_sqlfiddle"); //open a new tab with the sql fiddle site for testing
+			});
+	
+
+		</script>
+
+	</body>
+</html>

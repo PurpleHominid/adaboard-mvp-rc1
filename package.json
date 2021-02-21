@@ -1,0 +1,22 @@
+{
+	"name": "adaboard-mvp-rc1",
+	"version": "1.0.1",
+	"description": "Ada DB Assignment 1",
+	"main": "server.js",
+	"dependencies": {
+		"@popperjs/core": "^2.6.0",
+		"better-sqlite3": "^7.1.2",
+		"express": "^4.17.1",
+		"nodemon": "^2.0.7"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"_comment": "nodemon sometimes causes issues, to run without it switch the start script to noautorestart",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"autorestart": "nodemon server.js",
+		"noautorestart": "node server.js",
+		"start": "npm run noautorestart"
+	},
+	"author": "Ada Mike Watkins",
+	"license": "ISC"
+}
